@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>saffrone</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1 class="one">Saffrone</h1>
+        <h6 class="one">official</h6>
+    </header>
+    <div class="nine" >
+      <form>
+        <input class="six" type="text" name="username" placeholder="Username">
+        <input class="six" type="password" name="password" placeholder="Password">
+        <button onclick="login" class="six" type="submit">Submit</button>
+      </form>
+</div>
+<div class="seven">
+  <h3 id="egt">ab</h3>
+  <button class="cbutton" id="copybutton" style="background-color:greenyellow; color:greenyellow;" >copy url</button>
+</div>
+ 
+    <style>
+        .cbutton{
+            position:absolute;
+            top:0px;
+            left:400px;
+            height:45px;
+        }
+        form {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          margin-top: 100px;
+        }
+        
+        .seven{
+          position:absolute;
+          top:55%;
+          left:35%;
+          height:45px;
+          background-color:greenyellow;
+          
+        }
+        input {
+          width: 300px;
+          height: 40px;
+          margin-bottom: 10px;
+          padding: 5px;
+        }
+      
+        button {
+          width: 100px;
+          height: 40px;
+          background-color: #4CAF50;
+          color: white;
+          border: none;
+        }
+      </style>
+            <script>
+              document.getElementById('egt').innerHTML="enter your username and password";
+              function login() {
+                const username = document.getElementsByName('username')[0].value;
+                const password = document.getElementsByName('password')[0].value;
+      
+                // Perform validation and login logic here
+                if (username === 'rudeus' && password === 'RudeusGreryat12*') {
+                  alert('Login successful!,');
+                  document.getElementById('copybutton').style.backgroundColor="green";
+                  document.getElementById("copybutton").addEventListener("click", function() {
+                        var textToCopy="https://anyt345789.github.io/r-u-d-e-u-s/";
+                        var textarea = document.createElement("textarea");
+                        textarea.value = textToCopy;
+                        document.body.appendChild(textarea); 
+                        textarea.select();
+                        document.execCommand("copy");
+                        document.body.removeChild(textarea);
+                        alert("Text has been copied to the clipboard");
+
+                  });
+
+                  document.getElementById('egt').innerHTML="your webpage was created,url:https://anyt345789.github.io/r-u-d-e-u-s/"
+                }
+                if (username === 'Adidev p.b' && password === 'Peruvakkuttydangerboy') {
+                  alert('Login successful!, ');
+                  document.getElementById('copybutton').style.backgroundColor="green";
+                  document.getElementById("copybutton").addEventListener("click", function() {
+                        var textToCopy="https://anyt345789.github.io/adidev/";
+                        var textarea = document.createElement("textarea");
+                        textarea.value = textToCopy;
+                        document.body.appendChild(textarea); 
+                        textarea.select();
+                        document.execCommand("copy");
+                        document.body.removeChild(textarea);
+                        alert("Text has been copied to the clipboard");
+
+                  });
+                  document.getElementById('egt').innerHTML="your webpage was created,url:https://anyt345789.github.io/adidev/"
+                }else {
+                  alert();
+                }
+              }
+      
+              document.querySelector('form').addEventListener('submit', function(event) {
+                event.preventDefault();
+                login();
+              });
+            </script>
+      
+</body>
+</html>
